@@ -13,11 +13,9 @@ public class PlayerJoin implements Listener {
         Player player = e.getPlayer();
         String PlayerName = e.getPlayer().getName();
         if (player.isOp()) {
-            e.setJoinMessage("");
-            Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&',"&e欢迎管理员&f &c&l" + PlayerName + "&f &e进入服务器"));
+            e.setJoinMessage(ChatColor.translateAlternateColorCodes('&',"&e欢迎管理员&f &c&l" + PlayerName + "&f &e进入服务器"));
         }else {
-            e.setJoinMessage("");
-            Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&',"&e欢迎玩家&f &f&l" + PlayerName + "&f &e进入服务器"));
+            e.setJoinMessage(ChatColor.translateAlternateColorCodes('&',"&e欢迎玩家&f &f&l" + PlayerName + "&f &e进入服务器"));
         }
     }
 }

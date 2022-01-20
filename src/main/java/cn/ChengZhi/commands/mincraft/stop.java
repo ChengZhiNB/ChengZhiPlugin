@@ -19,16 +19,16 @@ public class stop implements CommandExecutor {
         String broadcaststop = (ChatColor.translateAlternateColorCodes('&', "&c&l服务器即将关闭!"));//广播消息"stopMessage"));//踢出信息
         String stopkick = ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(main.instance.getConfig().getString("stopMessage")));
         if (Bukkit.getOnlinePlayers().size() == 0) {
-            sender.sendMessage(stopdone);
-            Bukkit.broadcastMessage((broadcaststop));
-            Bukkit.broadcastMessage((broadcaststop));
-            Bukkit.broadcastMessage((broadcaststop));
-            Bukkit.shutdown();
+            if (sender.isOp()) {
+                sender.sendMessage(stopdone);
+                Bukkit.broadcastMessage((broadcaststop));
+                Bukkit.broadcastMessage((broadcaststop));
+                Bukkit.broadcastMessage((broadcaststop));
+                Bukkit.shutdown();
+            }
         }else {
             for (Player plauer : Bukkit.getOnlinePlayers()) {
                 if (sender.isOp()) {
-
-                }else {
                     sender.sendMessage(stopdone);
                     Bukkit.broadcastMessage((broadcaststop));
                     Bukkit.broadcastMessage((broadcaststop));

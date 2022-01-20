@@ -13,11 +13,9 @@ public class PlayerQuit implements Listener {
         Player player = e.getPlayer();
         String PlayerName = e.getPlayer().getName();
         if (player.isOp()) {
-            e.setQuitMessage("");
-            Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&',"&e管理员&f &c&l" + PlayerName + "&f &e离开了服务器"));
+            e.setQuitMessage(ChatColor.translateAlternateColorCodes('&',"&e管理员&f &c&l" + PlayerName + "&f &e离开了服务器"));
         }else {
-            e.setQuitMessage("");
-            Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&',"&e玩家&f &f&l" + PlayerName + "&f &e离开了服务器"));
+            e.setQuitMessage(ChatColor.translateAlternateColorCodes('&',"&e玩家&f &f&l" + PlayerName + "&f &e离开了服务器"));
         }
     }
 }
