@@ -1,0 +1,42 @@
+name: ChengZhiPluginV2
+version: '${project.version}'
+main: cn.ChengZhi.main
+api-version: 1.16
+authors: [ ChengZhi ]
+description: 橙汁写的一个小插件
+commands:
+  CZhelp:
+    description: 作者懒得写,请期待更新
+    permission-message: §c§l你没有权限怎么做
+  CZAllChat:
+    aliases: [say]
+    description: 作者懒得写,请期待更新
+    permission: ChengZhiPlugin.CZ.AllChat
+    permission-message: §c§l你没有权限怎么做
+  CZreload:
+    description: 作者懒得写,请期待更新
+    permission: ChengZhiPlugin.CZ.reload
+    permission-message: §c§l你没有权限怎么做
+  stop:
+    description: 作者懒得写,请期待更新
+    permission: ChengZhiPlugin.CZmincraft.stop
+    permission-message: §c§l你没有权限怎么做
+  list:
+    description: 作者懒得写,请期待更新
+    permission-message: §c§l你没有权限怎么做
+permissions:
+  ChengZhiPlugin.CZ.AllChat:
+    description: 作者懒得写,请期待更新
+    default: op
+  ChengZhiPlugin.CZ.reload:
+    description: 作者懒得写,请期待更新
+    default: op
+  ChengZhiPlugin.CZ.*:
+    description: 作者懒得写,请期待更新
+    default: op
+  ChengZhiPlugin.CZmincraft.stop:
+    description: 作者懒得写,请期待更新
+    default: op
+  ChengZhiPlugin.CZmincraft.*:
+    description: 作者懒得写,请期待更新
+    default: op
