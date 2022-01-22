@@ -7,7 +7,9 @@ import cn.ChengZhi.commands.mincraft.stop;
 import cn.ChengZhi.listeners.PlayerChat;
 import cn.ChengZhi.listeners.PlayerJoin;
 import cn.ChengZhi.listeners.PlayerQuit;
+import cn.ChengZhi.tasks.timeboardcast;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitTask;
 
 import java.util.Objects;
 
@@ -51,6 +53,9 @@ public final class main extends JavaPlugin {
         //分割线
         Objects.requireNonNull(getCommand("kick")).setExecutor(new kick());
         getLogger().info("已启动更好的kick命令");
+        //分割线
+        BukkitTask task = new cn.ChengZhi.tasks.timeboardcast(this).runTaskTimer(this, 0, getConfig().getInt("Time") * 20);
+        getLogger().info("已启动定时公告");
         //分割线
         getLogger().info("---------橙汁插件---------");
         System.out.println("");

@@ -1,5 +1,17 @@
 ##关服提示
-stopMessage: '&e服务器已关闭'
+StopMessage: '&e服务器已关闭'
+
+##是否开启公告
+TimeMessage: true
+
+##公告列表
+TimeMessageList:
+  - '&e欢迎使用橙汁插件'
+  - '&c测试1'
+  - '&a测试2'
+
+##发送间隔时间,（单位:秒）
+Time: 10
 
 ##是否开启聊天
 Chat: true
