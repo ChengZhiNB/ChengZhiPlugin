@@ -13,6 +13,14 @@ commands:
     description: 作者懒得写,请期待更新
     permission: ChengZhiPlugin.CZ.AllChat
     permission-message: §c§l你没有权限怎么做
+  mute:
+    description: 作者懒得写,请期待更新
+    permission: ChengZhiPlugin.CZ.mute
+    permission-message: §c§l你没有权限怎么做
+  unmute:
+    description: 作者懒得写,请期待更新
+    permission: ChengZhiPlugin.CZ.unmute
+    permission-message: §c§l你没有权限怎么做
   CZreload:
     description: 作者懒得写,请期待更新
     permission: ChengZhiPlugin.CZ.reload
@@ -24,8 +32,18 @@ commands:
   list:
     description: 作者懒得写,请期待更新
     permission-message: §c§l你没有权限怎么做
+  kick:
+    description: 作者懒得写,请期待更新
+    permission: ChengZhiPlugin.CZmincraft.kick
+    permission-message: §c§l你没有权限怎么做
 permissions:
   ChengZhiPlugin.CZ.AllChat:
+    description: 作者懒得写,请期待更新
+    default: op
+  ChengZhiPlugin.CZ.mute:
+    description: 作者懒得写,请期待更新
+    default: op
+  ChengZhiPlugin.CZ.unmute:
     description: 作者懒得写,请期待更新
     default: op
   ChengZhiPlugin.CZ.reload:
@@ -35,6 +53,9 @@ permissions:
     description: 作者懒得写,请期待更新
     default: op
   ChengZhiPlugin.CZmincraft.stop:
+    description: 作者懒得写,请期待更新
+    default: op
+  ChengZhiPlugin.CZmincraft.kick:
     description: 作者懒得写,请期待更新
     default: op
   ChengZhiPlugin.CZmincraft.*:

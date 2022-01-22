@@ -27,13 +27,13 @@ public class stop implements CommandExecutor {
                 Bukkit.shutdown();
             }
         }else {
-            for (Player plauer : Bukkit.getOnlinePlayers()) {
+            for (Player player : Bukkit.getOnlinePlayers()) {
                 if (sender.isOp()) {
                     sender.sendMessage(stopdone);
                     Bukkit.broadcastMessage((broadcaststop));
                     Bukkit.broadcastMessage((broadcaststop));
                     Bukkit.broadcastMessage((broadcaststop));
-                    plauer.kickPlayer((stopkick));
+                    player.kickPlayer((stopkick));
                     Bukkit.shutdown();
                 }
             }

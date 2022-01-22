@@ -19,6 +19,20 @@ public class PlayerChat implements Listener {
         if(!main.instance.getConfig().getBoolean("Chat")) {
             Player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&c&l发送失败&f,&a&l原因&f:&c&l该服务器禁止发送信息"));
             Chat.setCancelled(true);
+            return;
+        }
+
+        List<String> mutelists = new ArrayList<>();
+        main.instance.getConfig().getStringList("mutelist").forEach(s -> mutelists.add(s));
+
+        for (String mutelist : mutelists) {
+            if (Player.getName().equals(mutelist)) {
+                if (!Player.isOp()) {
+                    Player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&c&l发送失败&f,&a&l原因&f:&c&l你已被禁言"));
+                    Chat.setCancelled(true);
+                    return;
+                }
+            }
         }
 
         List<String> keywords = new ArrayList<>();

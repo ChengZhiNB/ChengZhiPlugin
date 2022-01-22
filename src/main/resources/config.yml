@@ -26,3 +26,7 @@ AntiKeyWords:
   - '弟弟'
   - '神经病'
   - '${'
+
+##禁言列表
+mutelist:
+  - 'test'
