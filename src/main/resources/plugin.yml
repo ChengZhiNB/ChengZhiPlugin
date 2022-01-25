@@ -21,6 +21,14 @@ commands:
     description: 作者懒得写,请期待更新
     permission: ChengZhiPlugin.CZ.unmute
     permission-message: §c§l你没有权限怎么做
+  CZSetting:
+    description: 作者懒得写,请期待更新
+    permission: ChengZhiPlugin.CZ.Setting
+    permission-message: §c§l你没有权限怎么做
+  kickGUI:
+    description: 作者懒得写,请期待更新
+    permission: ChengZhiPlugin.CZ.kickGUI
+    permission-message: §c§l你没有权限怎么做
   CZreload:
     description: 作者懒得写,请期待更新
     permission: ChengZhiPlugin.CZ.reload
@@ -44,6 +52,12 @@ permissions:
     description: 作者懒得写,请期待更新
     default: op
   ChengZhiPlugin.CZ.unmute:
+    description: 作者懒得写,请期待更新
+    default: op
+  ChengZhiPlugin.CZ.Setting:
+    description: 作者懒得写,请期待更新
+    default: op
+  ChengZhiPlugin.CZ.kickGUI:
     description: 作者懒得写,请期待更新
     default: op
   ChengZhiPlugin.CZ.reload:

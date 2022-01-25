@@ -1,5 +1,6 @@
 package cn.ChengZhi.commands.mincraft;
 
+import cn.ChengZhi.GuiHUB;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -17,7 +18,19 @@ public class kick implements CommandExecutor {
                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&c这个玩家不存在或不在线"));
             }else {
                 if (player.isOnline()) {
-                    player.kickPlayer(ChatColor.translateAlternateColorCodes('&',"&c你被踢出服务器" ));
+                    if (sender instanceof Player) {
+                        if (!player.isOp()) {
+                            if (!player.getName().equals(player.getName())) {
+                                player.kickPlayer(ChatColor.translateAlternateColorCodes('&',"&c你被踢出服务器" ));
+                            }else {
+                                sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&c你不能踢出自己"));
+                            }
+                        }else {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&c你不能踢出管理员"));
+                        }
+                    }else {
+                        player.kickPlayer(ChatColor.translateAlternateColorCodes('&',"&c你被踢出服务器" ));
+                    }
                 }
             }
         }else {
@@ -29,11 +42,28 @@ public class kick implements CommandExecutor {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&c这个玩家不存在或不在线"));
                 }else {
                     if (player.isOnline()) {
-                        player.kickPlayer(ChatColor.translateAlternateColorCodes('&', message));
+                        if (sender instanceof Player) {
+                            if (!player.isOp()) {
+                                if (!player.getName().equals(player.getName())) {
+                                    player.kickPlayer(ChatColor.translateAlternateColorCodes('&', message));
+                                }else {
+                                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&c你不能踢出自己"));
+                                }
+                            }else {
+                                sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&c你不能踢出管理员"));
+                            }
+                        }else {
+                            player.kickPlayer(ChatColor.translateAlternateColorCodes('&', message));
+                        }
                     }
                 }
             }else {
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&a正确用法&f: /kick &f<&e玩家ID&f> &f[&e理由&f]"));
+                if (sender instanceof Player) {
+                    Player player = (Player) sender;
+                    GuiHUB.KickGui(player);
+                }else {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&a正确用法&f: /kick &f<&e玩家ID&f> &f[&e理由&f]"));
+                }
             }
         }
         return false;

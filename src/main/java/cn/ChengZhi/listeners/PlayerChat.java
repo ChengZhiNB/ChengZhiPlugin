@@ -17,8 +17,10 @@ public class PlayerChat implements Listener {
         Player Player = Chat.getPlayer();
 
         if(!main.instance.getConfig().getBoolean("Chat")) {
-            Player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&c&l发送失败&f,&a&l原因&f:&c&l该服务器禁止发送信息"));
-            Chat.setCancelled(true);
+            if(!Player.isOp()) {
+                Player.sendMessage(ChatColor.translateAlternateColorCodes('&',"&c&l发送失败&f,&a&l原因&f:&c&l该服务器禁止玩家发送信息"));
+                Chat.setCancelled(true);
+            }
             return;
         }
 
